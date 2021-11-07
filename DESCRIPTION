@@ -1,9 +1,9 @@
 Package: logistlogF
 Title: Log-F-Penalized Conditional Logistic Regression
 Version: 0.0.1
-Authors@R: person("Brad", "McNeney", email = "mcneney@sfu.ca", role = c("aut", "cre"))
-Authors@R: person("Jinko", "Graham", email = "jgraham@sfu.ca", role = c("cre"))
-Authors@R: person("Georg", "Heinze", email = "georg.heinze@meduniwien.ac.at", role = c("cre"))
+Authors@R: c(person("Brad", "McNeney", email = "mcneney@sfu.ca", role = c("aut", "cre")),
+             person("Jinko", "Graham", email = "jgraham@sfu.ca", role = c("cre")),
+             person("Georg", "Heinze", email = "georg.heinze@meduniwien.ac.at", role = c("cre")))
 Description: Inference from log-F-penalized conditional logistic regression. Also included is conditional Firth logistic regression, following a suggestion from G. Heinze.
 Depends: R (>= 3.4.3)
 Imports: coxphf (>= 1.12)
