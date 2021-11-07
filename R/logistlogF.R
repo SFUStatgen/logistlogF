@@ -1,4 +1,22 @@
 # log-F(m,m)-penalized likelihood inference (unconditional likelihood) by data augmentation
+
+
+
+#' Logistic regression with log-F(m,m) penalty
+#'
+#' @param form R formula for the model
+#' @param dat dataframe of data
+#' @param m degree-of-freedome parameter
+#' @param control control convergence
+#'
+#' @return The fitted penalized logistic regression
+#' @export
+#'
+#' @examples
+#' data(DES); DES$fmatched <- factor(DES$matched.set)
+#' form = formula(case~fmatched+DES+matern.smoke)
+#' fit = logF(form,DES,m=2)
+#' coefficients(fit)
 logistlogF = function(form,dat,m,control=glm.control()) {
   # form is an R formula, data is the data, m is the numerator and denominator
   # degrees of freedom for the log-F prior, control is algorithm control
