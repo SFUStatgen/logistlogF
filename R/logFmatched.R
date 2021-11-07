@@ -3,10 +3,10 @@
 augment.logFmatched = function(form,dat,m=1) {
   # form is an R formula, dat is the data
   #---------------
-  # Step 1: Extract (i) the response and (ii) the design matrix 
-  # from the input formula and data frame so that we can augment them. 
+  # Step 1: Extract (i) the response and (ii) the design matrix
+  # from the input formula and data frame so that we can augment them.
   mf = model.frame(form,dat)
-  D = model.response(mf) 
+  D = model.response(mf)
   X = model.matrix(form,dat)
   if(ncol(X)==1) { #intercept only model, no augmentation needed
     return(X)
@@ -36,18 +36,18 @@ augment.logFmatched = function(form,dat,m=1) {
   return(dat)
 }
 
-# Testing: compare to Firth penalty
-DES = read.csv("DES.csv")
-form = formula(case~DES+matern.smoke)
-source("clogitf.R")
-# clogitf() needs the matched set variable to be named "matchedset"
-DES$matchedset = DES$matched.set 
-fit = clogitf(form,DES,pl=TRUE)
-coefficients(fit)
-cbind(log(fit$ci.lower),log(fit$ci.upper))
-
-DESaug = augment.logFmatched(form,DES,m=2)
-fit = clogitf(form,DESaug,pl=TRUE,penalty=0)
-coefficients(fit)
-cbind(log(fit$ci.lower),log(fit$ci.upper))
+## Testing: compare to Firth penalty
+#DES = read.csv("DES.csv")
+#form = formula(case~DES+matern.smoke)
+#source("clogitf.R")
+## clogitf() needs the matched set variable to be named "matchedset"
+#DES$matchedset = DES$matched.set
+#fit = clogitf(form,DES,pl=TRUE)
+#coefficients(fit)
+#cbind(log(fit$ci.lower),log(fit$ci.upper))
+#
+#DESaug = augment.logFmatched(form,DES,m=2)
+#fit = clogitf(form,DESaug,pl=TRUE,penalty=0)
+#coefficients(fit)
+#cbind(log(fit$ci.lower),log(fit$ci.upper))
 
