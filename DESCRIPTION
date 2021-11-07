@@ -1,5 +1,5 @@
 Package: logistlogF
-Title: Log-F-Penalized Conditional Logistic Regression
+Title: Log-F-Penalized Conditional Logistic R
 Version: 0.0.1
 Authors@R: c(person("Brad", "McNeney", email = "mcneney@sfu.ca", role = c("aut", "cre")),
              person("Jinko", "Graham", email = "jgraham@sfu.ca", role = c("cre")),
