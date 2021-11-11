@@ -1,4 +1,4 @@
-#' Title
+#' Choose smoothing parameter with marginal likelihood estimated by Laplace approximation
 #'
 #' @param m
 #' @param XM
