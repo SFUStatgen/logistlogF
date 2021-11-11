@@ -3,6 +3,8 @@ Title: Log-F-Penalized Logistic and Conditional Logistic Regression
 Version: 0.0.1
 Authors@R: c(person("Brad", "McNeney", email = "mcneney@sfu.ca", role = c("aut", "cre")),
              person("Jinko", "Graham", email = "jgraham@sfu.ca", role = c("aut")),
+             person("Siyuan", "Chen", email = "siyuan_chen@sfu.ca", role = c("aut")),
+             person("Ying", "Yu", email = "ying_yu_5@sfu.ca", role = c("aut")),
              person("Georg", "Heinze", email = "georg.heinze@meduniwien.ac.at", role = c("ctb")))
 Description: Inference from log-F-penalized conditional logistic regression. Also included is conditional Firth logistic regression, following a suggestion from G. Heinze.
 Depends: R (>= 3.4.3)
