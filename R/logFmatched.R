@@ -1,6 +1,15 @@
 
-# log-F(m,m)-penalized conditional likelihood inference by data augmentation
-augment.logFmatched = function(form,dat,m=1) {
+#' log-F(m,m)-penalized conditional likelihood inference by data augmentation
+#'
+#' @param form
+#' @param dat
+#' @param m
+#'
+#' @return
+#' @export
+#'
+#' @examples
+logFmatched = function(form,dat,m=1) {
   # form is an R formula, dat is the data
   #---------------
   # Step 1: Extract (i) the response and (ii) the design matrix

@@ -1,3 +1,19 @@
+#' Title
+#'
+#' @param mvals
+#' @param data
+#' @param weight
+#' @param Y_index
+#' @param X_index
+#' @param C_index
+#' @param N
+#' @param method
+#' @param ini_alpha
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_m <- function(mvals,data,weight,Y_index,X_index,C_index,N,method="MCEM",ini_alpha=NULL){
   require(parallel)
   # Input:
@@ -17,7 +33,7 @@ get_m <- function(mvals,data,weight,Y_index,X_index,C_index,N,method="MCEM",ini_
     f <- function(x) {stats:::predict.smooth.spline(ss,x)$y}
     ss <- smooth.spline(pp)
     return(optimize(f,lower=first(mvals),upper=last(mvals),maximum=T)$maximum)}
-  
+
   if (method == "LA"){
     logl_allm<-unlist(mclapply(X=mvals,FUN=LAapproxL,XM=as.matrix(data[,X_index]),
                                y=data[,Y_index],ini_alpha=ini_alpha,

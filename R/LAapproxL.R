@@ -1,3 +1,16 @@
+#' Title
+#'
+#' @param m
+#' @param XM
+#' @param y
+#' @param ini_alpha
+#' @param confounding_factor
+#' @param weight_col
+#'
+#' @return
+#' @export
+#'
+#' @examples
 LAapproxL<-function(m,XM,y,ini_alpha,confounding_factor,weight_col){
     n<-nrow(XM)
     p<-ncol(XM)-1
