@@ -10,7 +10,7 @@
 #' @param method The method to use, "MCEM"(default) or "LA"
 #' @param ini_alpha The initial value for the intercept term
 #'
-#' @return
+#' @return the value of shrinkage parameter m with the largest approximate penalised likelihood
 #' @export
 #'
 #' @examples
