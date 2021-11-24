@@ -1,20 +1,20 @@
 #' Title
 #'
-#' @param mvals
-#' @param data
-#' @param weight
-#' @param Y_index
-#' @param X_index
-#' @param C_index
-#' @param N
-#' @param method
-#' @param ini_alpha
+#' @param mvals A vector of possible values of shrinkage parameter m to be considered
+#' @param data A data.frame object containing response and covariates
+#' @param weight The column name for the weights assigned to each covariate in data
+#' @param Y_index The column index for the response
+#' @param X_index The column index/indice for the covariate(s)
+#' @param C_index The column index for the confounder in data
+#' @param N The number of Monte Carlo replicates if method of "MCEM" is implemented
+#' @param method The method to use, "MCEM"(default) or "LA"
+#' @param ini_alpha The initial value for the intercept term
 #'
 #' @return
 #' @export
 #'
 #' @examples
-get_m <- function(mvals,data,weight,Y_index,X_index,C_index,N,method="MCEM",ini_alpha=NULL){
+get_m <- function(mvals,data,weight=NULL,Y_index,X_index,C_index=NULL,N,method="MCEM",ini_alpha=NULL){
   require(parallel)
   # Input:
   # - mvals is a list of m values
