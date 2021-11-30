@@ -14,6 +14,11 @@
 #' @export
 #'
 #' @examples
+#' data(res_1)
+#' K <- 50
+#' set.seed(1234)
+#' mhat <- get_m(mvals=c(1:10),data=res$data,weight=res$weight,Y_index=K+2,X_index=c(1:K),C_index=c(K+1),N=1000)
+
 get_m <- function(mvals,data,weight=NULL,Y_index,X_index,C_index=NULL,N,method="MCEM",ini_alpha=NULL){
   require(parallel)
   # Input:
