@@ -2,7 +2,7 @@
 #'
 #' @param mvals A vector of possible values of shrinkage parameter m to be considered
 #' @param data A data.frame object containing response and covariates
-#' @param weight The column name for the weights assigned to each covariate in data
+#' @param weight The weights assigned to each covariate in data
 #' @param Y_index The column index for the response
 #' @param X_index The column index/indice for the covariate(s)
 #' @param C_index The column index for the confounder in data
