@@ -7,7 +7,7 @@ Authors@R: c(person("Brad", "McNeney", email = "mcneney@sfu.ca", role = c("aut",
              person("Ying", "Yu", email = "ying_yu_5@sfu.ca", role = c("aut")),
              person("Georg", "Heinze", email = "georg.heinze@meduniwien.ac.at", role = c("ctb")))
 Description: Inference from log-F-penalized conditional logistic regression. Also included is conditional Firth logistic regression, following a suggestion from G. Heinze.
-Depends: R (>= 3.5.2)
+Depends: R (>= 3.6.1)
 Imports: coxphf (>= 1.12)
 License: GPL-3
 Encoding: UTF-8
